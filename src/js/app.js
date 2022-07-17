@@ -30,3 +30,5 @@ const extract = ({ id, name, description = "Описание недоступн�
 
 const result = character.special.map((attack) => extract(attack));
 console.log(result)
+
+export default extract
