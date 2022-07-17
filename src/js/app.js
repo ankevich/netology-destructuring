@@ -1,6 +1,6 @@
 const character = {
-  name: "Лучник",
-  type: "Bowman",
+  name: 'Лучник',
+  type: 'Bowman',
   health: 50,
   level: 3,
   attack: 40,
@@ -8,20 +8,22 @@ const character = {
   special: [
     {
       id: 8,
-      name: "Двойной выстрел",
-      icon: "http://...",
-      description: "Двойной выстрел наносит двойной урон",
+      name: 'Двойной выстрел',
+      icon: 'http://...',
+      description: 'Двойной выстрел наносит двойной урон',
     },
     {
       id: 9,
-      name: "Нокаутирующий удар",
-      icon: "http://...",
+      name: 'Нокаутирующий удар',
+      icon: 'http://...',
       // <- обратите внимание, описание "засекречено"
     },
   ],
 };
 
-const extract = ({ id, name, description = "Описание недоступно", icon }) => [
+const extract = ({
+  id, name, description = 'Описание недоступно', icon,
+}) => [
   id,
   name,
   description,
@@ -29,6 +31,7 @@ const extract = ({ id, name, description = "Описание недоступн�
 ];
 
 const result = character.special.map((attack) => extract(attack));
-console.log(result)
+// eslint-disable-next-line no-console
+console.log(result);
 
-export default extract
+export default extract;
